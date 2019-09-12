@@ -1,0 +1,18 @@
+Paleta de colores:
+
+Color-name	    |	hexadecimal	|	rgb
+Cobalt		    |	#213D8F		|	rgb(33, 61, 143)
+Greyish brown	|	#4A4A4A		|	rgb(74, 74, 74)
+Pale grey 	    |	#F6F7FB		|	rgb(246, 247, 251)
+Pale grey two 	|	#E8EBF3		|	rgb(232, 235, 243)
+Avocado		    |	#8EC03F		|	rgb(142, 192, 63)
+Light grey blue	|	#909EC7		|	rgb(144, 158, 199)
+Topaz 		    |	#1DB9DE		|	rgb(29, 185, 222)
+
+Font book
+
+Donde se usara fuente	|	nombre				            |	Line height
+Hidden-details-title	|	SourceSansPro, Regular, 16px	|	25px
+Hidden-details		    |	SourceSansPro, Regular, 16px	|	25px
+Column-name		        |	SourceSansPro, Semibold, 14px	|	none
+Column-text		        |	SourceSansPro, Regular, 14px	|	none
