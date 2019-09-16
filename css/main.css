@@ -11,6 +11,7 @@
     --pale-gray: #F6F7FB;
     --pale-gray-two: #E8EBF3;
     --topaz: #1DB9DE;
+    --white: #ffffff;
 }
 
 *, html, body {
@@ -35,11 +36,64 @@
     background: var(--pale-gray-two);
 }
 
-/* Search button and Select items */
+/* Search-nav */
 
-/* .container > div {
+.search-nav {
+    position: relative;
+    width: 80%;
+    height: 6%;
+}
 
+.search-nav div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.search-nav div > ul {
+    text-align: center;
+    width: auto;
+    height: auto;
+    max-height: 30px;
+    overflow: hidden;
+    color: var(--cobalt);
+    font-size: 14PX;
+    font-weight: bold;
+    background-color: var(--white);
+    padding: 7px;
+    cursor: pointer;
+    margin-right: 20px;
+    border: 1px solid var(--cobalt);
+    position: relative;
+}
+
+/* .search-nav div select {
+    border: none;
+    color: var(--cobalt);
+    font-weight: bold;
+    padding: 7px;
+    margin-right: 20px;
 } */
+
+.search-nav div select > option {
+    outline: none;
+    font-size: 16px;
+    height: 15px;
+}
+
+.search-nav div select > option:focus {
+    background: var(--pale-gray-two) !important;
+}
+
+.search-nav div button.btn {
+    border: none;
+    background: var(--avocado);
+    color: var(--white);
+    font-size: 14px;
+    width: 65px;
+    padding: 7px;
+    border-radius: 2px;
+}
 
 /* App */
 
@@ -47,13 +101,10 @@
     width: 80%;
     margin: 0 auto;
     padding: 10px;
-    background: var(--pale-gray);
+    background: var(--white);
     border-radius: 3px;
 }
 
-/* .container > div.app .items {
-    
-} */
 .title {
     font-size: 16px;
     font-weight: bold;
@@ -66,11 +117,36 @@
     display: flex;
     text-align: left;
     justify-content: space-between;
-    padding: 10px;
+    padding: 1.1rem;
     border-top: 1px solid var(--pale-gray-two);
 }
 
 
 .item span {
     display: inline-block;
+    text-align: left;
+    width: 150px;
+}
+
+.item :nth-child(5){
+    width: 100px;
+    text-align: right;
+}
+
+.item :nth-child(6){
+    width: 90px;
+}
+
+
+
+/* Animations */
+
+@keyframes arrow {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translate(-5px, -5px);
+    }
 }
