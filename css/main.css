@@ -22,6 +22,12 @@
     font-size: 14px;
 }
 
+.opened {
+    max-height: 40px;
+    border: 1px solid rgba(74, 74, 74, 0.295) !important;
+    box-shadow: none !important;
+}
+
 /* container */
 
 .container {
@@ -41,7 +47,8 @@
 .search-nav {
     position: relative;
     width: 80%;
-    height: 6%;
+    height: 10%;
+    padding: 15px 0;
 }
 
 .search-nav div {
@@ -50,39 +57,49 @@
     justify-content: flex-end;
 }
 
-.search-nav div > ul {
-    text-align: center;
-    width: auto;
+.search-nav div .select {
+    text-align: left;
+    width: 150px;
     height: auto;
-    max-height: 30px;
+    max-height: auto;
     overflow: hidden;
     color: var(--cobalt);
-    font-size: 14PX;
     font-weight: bold;
     background-color: var(--white);
-    padding: 7px;
     cursor: pointer;
     margin-right: 20px;
-    border: 1px solid var(--cobalt);
+    border: 1px solid rgba(29, 184, 222, 0.616);
+    border-radius: 3px;
     position: relative;
+    display: inline-block;
+    box-shadow: 2px 2px 3px rgba(74, 74, 74, 0.199) , -2px -2px 3px rgba(74, 74, 74, 0.164) ;
+    transition: border .2s ease-in;
 }
 
-/* .search-nav div select {
-    border: none;
-    color: var(--cobalt);
+.search-nav div .select span {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+    border-bottom: 1px solid var(--pale-gray-two);
+}
+
+.search-nav div:nth-child(2){
+    width: 90px;
+}
+
+.search-nav div .select li {
+    width: 100%;
+    list-style: none;
+    font-size: 14px;
+    padding: 10px 10px;
     font-weight: bold;
-    padding: 7px;
-    margin-right: 20px;
-} */
-
-.search-nav div select > option {
-    outline: none;
-    font-size: 16px;
-    height: 15px;
+    color: rgba(33, 61, 143, 0.795);
 }
 
-.search-nav div select > option:focus {
-    background: var(--pale-gray-two) !important;
+.search-nav div .select li:hover {
+    background-color: rgba(144, 158, 199, 0.411);
+    color: var(--cobalt);
 }
 
 .search-nav div button.btn {
@@ -90,9 +107,11 @@
     background: var(--avocado);
     color: var(--white);
     font-size: 14px;
-    width: 65px;
+    width: 80px;
+    height: 40px;
     padding: 7px;
-    border-radius: 2px;
+    border-radius: 3px;
+    cursor: pointer;
 }
 
 /* App */
@@ -100,7 +119,6 @@
 .container > div.app {
     width: 80%;
     margin: 0 auto;
-    padding: 10px;
     background: var(--white);
     border-radius: 3px;
 }
@@ -111,42 +129,77 @@
     color: var(--cobalt);
     line-height: 25px;
     border: none !important;
+    cursor: unset !important;
 }
 
-.container > div.app .items .item {
+.container div.app .items div.item {
     display: flex;
     text-align: left;
     justify-content: space-between;
     padding: 1.1rem;
     border-top: 1px solid var(--pale-gray-two);
+    cursor: pointer;
 }
 
+div.item div {
+    width: 100%;
+    justify-content: space-between; 
+}
 
-.item span {
+/* Hidden Card */
+
+.container div.app .items .card {
+    display: flex;
+    width: 100%;
+    height: 150px;
+    background-color: rgba(144, 158, 199, 0.137);
+    font-size: 16px;
+    padding: 0 40px;
+}
+
+div.card .left {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none !important;
+}
+
+div.card .right {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border: none !important;
+}
+
+div.card .left p,
+div.card .right p{
+    display: inline-block;
+    margin: 10px 0;
+}
+
+div.card .left p span,
+div.card .right p span {
+    color: var(--cobalt);
+    display: inline-block;
+    width: 100px;
+}
+
+.item span, 
+div.item div span {
     display: inline-block;
     text-align: left;
-    width: 150px;
+    width: calc(100%/6);
 }
 
 .item :nth-child(5){
-    width: 100px;
     text-align: right;
 }
 
 .item :nth-child(6){
-    width: 90px;
-}
-
-
-
-/* Animations */
-
-@keyframes arrow {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translate(-5px, -5px);
-    }
+    margin-left: 10px; 
+    max-width: 90px;
 }
