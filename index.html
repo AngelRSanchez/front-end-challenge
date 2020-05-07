@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +9,19 @@
     <!-- Style -->
     <link rel="stylesheet" href="./css/main.css">
 </head>
+
 <body>
-    
+
     <div class="container">
         <div class="search-nav">
             <div>
-                    <div class="select opened"> 
+                <div class="select opened">
                     <span>Transaction type</span>
                     <li>Payment</li>
                     <li>Authorize</li>
                     <li>Credit</li>
                 </div>
-                    <div class="select opened"> 
+                <div class="select opened">
                     <span>Currency</span>
                     <li>USD</li>
                     <li>EUR</li>
@@ -38,130 +40,7 @@
                     <span>Amount</span>
                     <span>Currency</span>
                 </div>
-                <div class="item">
-                    <div id="userData" class="userData">
-                        <span>Meredith Gerlach</span>
-                        <span>Diners Club</span>
-                        <span>XXXX 0005</span>
-                        <span>Payment</span>
-                        <span>100,00</span>
-                        <span>USD</span>
-                    </div>
-                </div>
-                <div id="card" class="card hidden">
-                    <div class="left">
-                        <p>
-                            <span>ID:</span> 7b1c2f2f-a001-460b-9d9a-7a6d849bld5d
-                        </p>
-                        <p>
-                            <span>Tracking Code:</span> 24c22a09-5a94-4552-83de-6128f360b906
-                        </p>
-                        <p>
-                            <span>Brand ID:</span> 1060
-                        </p>
-                    </div>
-                    <div class="right">
-                        <p>
-                            <span>First 6 digits:</span> 378282 XXXX
-                        </p>
-                        <p>
-                            <span>Expiry month:</span> 03
-                        </p>
-                        <p>
-                            <span>Expiry year:</span> 2020
-                        </p>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Amancio Ivers</span>
-                        <span>VISA</span>
-                        <span>XXXX 1234</span>
-                        <span>Payment</span>
-                        <span>50,00</span>
-                        <span>EUR</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Noel Towner</span>
-                        <span>VISA</span>
-                        <span>XXXX 2424</span>
-                        <span>Payment</span>
-                        <span>25,00</span>
-                        <span>EUR</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Raquel Peterson</span>
-                        <span>MasterCard</span>
-                        <span>XXXX 2288</span>
-                        <span>Payment</span>
-                        <span>10,00</span>
-                        <span>GBP</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Gart Cuesta</span>
-                        <span>AMEX</span>
-                        <span>XXXX 6363</span>
-                        <span>Authorize</span>
-                        <span>238,28</span>
-                        <span>USD</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Silvester Vargas</span>
-                        <span>VISA</span>
-                        <span>XXXX 3789</span>
-                        <span>Credit</span>
-                        <span>25,00</span>
-                        <span>EUR</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Agostino Basurto</span>
-                        <span>VISA</span>
-                        <span>XXXX 4242</span>
-                        <span>Payment</span>
-                        <span>18,00</span>
-                        <span>EUR</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Terrence Crespo</span>
-                        <span>VISA</span>
-                        <span>XXXX 1369</span>
-                        <span>Payment</span>
-                        <span>100,00</span>
-                        <span>EUR</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Martina Eliott</span>
-                        <span>MasterCard</span>
-                        <span>XXXX 6089</span>
-                        <span>Payment</span>
-                        <span>108,00</span>
-                        <span>USD</span>
-                    </div>
-                </div>
-                <div class="item">
-                    <div>
-                        <span>Otis Padovano</span>
-                        <span>MasterCard</span>
-                        <span>XXXX 8746</span>
-                        <span>Authorize</span>
-                        <span>100,00</span>
-                        <span>GBP</span>
-                    </div>
-                </div>
+                <div id="users" class="users"></div>
             </div>
         </div>
     </div>
@@ -170,4 +49,5 @@
     <!-- Script -->
     <script src="./script/main.js"></script>
 </body>
+
 </html>
