@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Front-end challenge</title>
     <!-- Style -->
     <link rel="stylesheet" href="./css/main.css">
@@ -15,19 +14,19 @@
     <div class="container">
         <div class="search-nav">
             <div>
-                <div class="select opened">
-                    <span>Transaction type</span>
-                    <li>Payment</li>
-                    <li>Authorize</li>
-                    <li>Credit</li>
-                </div>
-                <div class="select opened">
-                    <span>Currency</span>
-                    <li>USD</li>
-                    <li>EUR</li>
-                    <li>GBP</li>
-                </div>
-                <button type="submit" class="btn">Search</button>
+                <select id="transactionType" class="select" title="Transaction Type">
+                    <option value="">Transaction type</option>
+                    <option value="Payment">Payment</option>
+                    <option value="Authorize">Authorize</option>
+                    <option value="Credit">Credit</option>
+                </select>
+                <select id="currency" class="select" title="Currency">
+                    <option value="">Currency</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="GBP">GBP</option>
+                </select>
+                <button id="search" type="submit" class="btn">Search</button>
             </div>
         </div>
         <div class="app">
