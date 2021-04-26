@@ -110,6 +110,10 @@ async function search(e) {
 	if (transactionType == "" && currency == "") {
 		// TODO: Create Alert message
 		console.log("Al menos un campo es requerido.");
+		// Mensaje de alerta
+		alertMessage();
+
+		// Muestra nuevamente la lista completa de usuarios
 		showAllUsers();
 	}
 
@@ -119,7 +123,6 @@ async function search(e) {
 
 	console.log(usersCurrencyFilter)
 	console.log(usersTransactionTypeFilter)
-
 
 	if (usersCurrencyFilter) {
 		showUsers(usersCurrencyFilter);
@@ -131,6 +134,33 @@ async function search(e) {
 
 }
 
+function alertMessage() {
+
+	let alertBox = document.createElement("div");
+	let msg = document.createTextNode("Al menos un campo es requerido.");
+	let p = document.createElement('p');
+	let btn = document.createElement('button');
+
+	btn.innerHTML = "&#10004;";
+	btn.classList.add("btnMessageBox");
+	btn.setAttribute('id', 'btnAlertMessage');
+	alertBox.classList.add("alertMessageBox");
+
+	p.appendChild(msg);
+	alertBox.appendChild(p);
+	alertBox.appendChild(btn);
+
+	document.getElementById("app").appendChild(alertBox);
+
+	btn.addEventListener('click', deleteAlertMessage);
+
+}
+
+function deleteAlertMessage() {
+	const btn = document.getElementById('btnAlertMessage');
+
+	return btn.parentElement.remove();
+}
 
 
 

@@ -47,10 +47,7 @@
     position: relative;
     display: flex;
     width: 100%;
-    height: 100%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    height: 100vh;
     color: var(--greyish-brown);
     background: var(--pale-gray-two);
 }
@@ -133,9 +130,13 @@
 
 .container > div.app {
     width: 80%;
-    margin: 10% auto;
+    margin: 0% auto;
     background: var(--white);
     border-radius: 3px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .title {
@@ -152,7 +153,6 @@
 .container div.app .items div.item {
     display: flex;
     text-align: left;
-    justify-content: space-between;
     border-top: 1px solid var(--pale-gray-two);
     cursor: pointer;
 }
@@ -231,4 +231,41 @@ div.item div span {
 .item :nth-child(6){
     margin-left: 10px; 
     max-width: 90px;
+}
+
+/* Alert */
+.alertMessageBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #ffffff;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 10px 8px #9cab854a;
+}
+
+.alertMessageBox > p {
+    width: 100%;
+    font-size: 1.5rem;
+    text-align: center;
+    color: #8ec03f;
+    margin-bottom: 10px;
+}
+
+.alertMessageBox > .btnMessageBox {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    background: #8ec03f;
+    cursor: pointer;
 }
